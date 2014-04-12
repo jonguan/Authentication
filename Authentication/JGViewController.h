@@ -10,6 +10,11 @@
 
 @interface JGViewController : UIViewController <NSURLConnectionDelegate>
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIButton *certOneButton;
+@property (weak, nonatomic) IBOutlet UIButton *certTwoButton;
+
+- (IBAction)didClickButton:(UIButton *)sender;
+
 
 @end

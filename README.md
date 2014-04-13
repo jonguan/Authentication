@@ -1,7 +1,7 @@
 Authentication
 ==============
 
-SSL Pinning for iOS
+SSL Pinning for iOS.  Tested on Xcode 5.1 with OSX Mavericks 10.9.2
 
 Setup:
 

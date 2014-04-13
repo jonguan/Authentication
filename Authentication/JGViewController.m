@@ -115,5 +115,8 @@
     NSMutableString *textViewText = [self.textView.text mutableCopy];
     [textViewText appendFormat:@"%@\n", text];
     self.textView.text = textViewText;
+
+    // Scroll textview to latest text
+    [self.textView scrollRangeToVisible:NSMakeRange(self.textView.text.length, 1)];
 }
 @end

@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOu-gf-gdn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOu-gf-gdn">
                                 <rect key="frame" x="0.0" y="268" width="320" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-uf-nbA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-uf-nbA">
                                 <rect key="frame" x="20" y="59" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Use Certificate 1">
@@ -33,7 +33,7 @@
                                     <action selector="didClickButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PAl-45-jzO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-Yu-Lxe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-Yu-Lxe">
                                 <rect key="frame" x="20" y="97" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Use Certificate 2">
@@ -43,15 +43,43 @@
                                     <action selector="didClickButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kjw-Rx-joA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8V-If-7Rq">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8V-If-7Rq">
                                 <rect key="frame" x="20" y="245" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: Be sure to restart server between using certificates" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="oyn-n7-B8q">
+                                <rect key="frame" x="20" y="135" width="280" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="ggA-wi-BvC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOu-gf-gdn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1Ck-N9-1A2"/>
+                            <constraint firstItem="oyn-n7-B8q" firstAttribute="trailing" secondItem="mo5-Yu-Lxe" secondAttribute="trailing" id="3F2-cu-Y2j"/>
+                            <constraint firstAttribute="bottom" secondItem="bOu-gf-gdn" secondAttribute="bottom" id="JqB-bd-AnE"/>
+                            <constraint firstItem="N8V-If-7Rq" firstAttribute="centerX" secondItem="bOu-gf-gdn" secondAttribute="centerX" id="PEc-y7-1Xc"/>
+                            <constraint firstItem="mo5-Yu-Lxe" firstAttribute="top" secondItem="ZmZ-uf-nbA" secondAttribute="bottom" constant="8" symbolic="YES" id="Rhe-P9-40c"/>
+                            <constraint firstItem="mo5-Yu-Lxe" firstAttribute="trailing" secondItem="ZmZ-uf-nbA" secondAttribute="trailing" id="T2D-rS-1GM"/>
+                            <constraint firstItem="oyn-n7-B8q" firstAttribute="top" secondItem="mo5-Yu-Lxe" secondAttribute="bottom" constant="8" symbolic="YES" id="cNd-2C-sZU"/>
+                            <constraint firstAttribute="trailing" secondItem="ZmZ-uf-nbA" secondAttribute="trailing" constant="20" symbolic="YES" id="eI7-99-pdD"/>
+                            <constraint firstItem="oyn-n7-B8q" firstAttribute="trailing" secondItem="N8V-If-7Rq" secondAttribute="trailing" id="gMu-6A-2te"/>
+                            <constraint firstItem="ZmZ-uf-nbA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="39" id="goO-pW-AjP"/>
+                            <constraint firstItem="ZmZ-uf-nbA" firstAttribute="leading" secondItem="mo5-Yu-Lxe" secondAttribute="leading" id="ovD-uq-RgI"/>
+                            <constraint firstItem="bOu-gf-gdn" firstAttribute="top" secondItem="N8V-If-7Rq" secondAttribute="bottom" constant="2" id="qZL-3L-NBG"/>
+                            <constraint firstItem="ZmZ-uf-nbA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="tgg-Aj-Zsu"/>
+                            <constraint firstItem="oyn-n7-B8q" firstAttribute="leading" secondItem="N8V-If-7Rq" secondAttribute="leading" id="uUE-eI-H16"/>
+                            <constraint firstItem="oyn-n7-B8q" firstAttribute="leading" secondItem="mo5-Yu-Lxe" secondAttribute="leading" id="wzh-br-ztQ"/>
+                            <constraint firstItem="N8V-If-7Rq" firstAttribute="top" secondItem="oyn-n7-B8q" secondAttribute="bottom" constant="31" id="zhW-35-1YC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="certOneButton" destination="ZmZ-uf-nbA" id="jbQ-8j-dv6"/>

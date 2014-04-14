@@ -17,14 +17,18 @@ Setup:
 Usage:
 
 1. Start apache server
+
       sudo apachectl configtest 
+
       sudo apachectl start
 
 2. Run xcode project in simulator
 3. Hit button 'Use Certificate 1'
 4. See that everything passes
 5. Restart apache server
+
       sudo apachectl restart
+
 6. Hit button 'Use certificate 2'
 7. See that certificate does not match and request fails
 
